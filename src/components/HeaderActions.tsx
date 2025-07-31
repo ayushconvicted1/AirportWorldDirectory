@@ -1,26 +1,22 @@
 "use client";
 
 import React, { useState } from "react";
-import { LoginModal, SignupModal } from "./AuthModals";
+import { SignupModal } from "./AuthModals";
+import Link from "next/link";
 const HeaderActions = () => {
-  const [modal, setModal] = useState<any>(null); // 'login', 'signup', or null
-
-  const openLoginModal = () => setModal("login");
-  const openSignupModal = () => setModal("signup");
+  const [modal, setModal] = useState<any>(null);
   const closeModal = () => setModal(null);
-
-  const switchToSignup = () => setModal("signup");
   const switchToLogin = () => setModal("login");
 
   return (
     <>
       <div className="flex items-center space-x-8">
-        <a
+        <Link
           href="/"
           className="text-gray-600 hover:text-blue-600 transition-colors"
         >
           Home
-        </a>
+        </Link>
         {/* <button
           onClick={openSignupModal}
           className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -35,9 +31,9 @@ const HeaderActions = () => {
         </button> */}
       </div>
 
-      {modal === "login" && (
+      {/* {modal === "login" && (
         <LoginModal onClose={closeModal} onSwitchToSignup={switchToSignup} />
-      )}
+      )} */}
       {modal === "signup" && (
         <SignupModal onClose={closeModal} onSwitchToLogin={switchToLogin} />
       )}

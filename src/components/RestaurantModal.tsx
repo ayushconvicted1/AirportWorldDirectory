@@ -1,10 +1,9 @@
 // @/components/RestaurantModal.tsx
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   IoArrowBack,
-  IoShareOutline,
   IoStar,
   IoStarOutline,
   IoGlobeOutline,
@@ -48,7 +47,6 @@ export default function RestaurantModal({
   onClose: () => void;
   isProviderLoading: boolean;
 }) {
-  const [rating, setRating] = useState(0);
   if (!item) return null;
 
   const roundedRating = Math.round(item.ratings);

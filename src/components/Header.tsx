@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { FaSearch, FaUserCircle } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { useRouter, useSearchParams } from "next/navigation";
 
 // --- TYPE DEFINITIONS ---
@@ -32,20 +32,6 @@ function useDebounce<T>(value: T, delay: number): T {
   }, [value, delay]);
   return debouncedValue;
 }
-
-// --- PLACEHOLDER for HeaderActions ---
-const HeaderActions = () => (
-  <div className="flex items-center space-x-4">
-    <button className="text-gray-600 hover:text-blue-600">
-      Become a Partner
-    </button>
-    <button className="text-gray-600 hover:text-blue-600">Sign In</button>
-    <button className="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
-      <FaUserCircle size={24} />
-      <span>Account</span>
-    </button>
-  </div>
-);
 
 // --- CLIENT COMPONENTS ---
 const Navbar = () => (
