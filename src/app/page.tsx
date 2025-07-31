@@ -19,8 +19,7 @@ interface ServiceType {
 async function getServiceTypes(): Promise<ServiceType[]> {
   try {
     const res = await fetch(
-      "https://ow91reoh80.execute-api.ap-south-1.amazonaws.com/air/service-types",
-      { cache: "no-store" }
+      "https://ow91reoh80.execute-api.ap-south-1.amazonaws.com/air/service-types"
     );
     if (!res.ok) throw new Error("Failed to fetch data");
     return res.json();
