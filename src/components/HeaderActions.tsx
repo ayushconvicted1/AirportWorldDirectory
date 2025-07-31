@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { LoginModal, SignupModal } from "./AuthModals";
-
 const HeaderActions = () => {
   const [modal, setModal] = useState<any>(null); // 'login', 'signup', or null
 
@@ -17,12 +16,12 @@ const HeaderActions = () => {
     <>
       <div className="flex items-center space-x-8">
         <a
-          href="#"
+          href="/"
           className="text-gray-600 hover:text-blue-600 transition-colors"
         >
           Home
         </a>
-        <button
+        {/* <button
           onClick={openSignupModal}
           className="text-gray-600 hover:text-blue-600 transition-colors"
         >
@@ -33,7 +32,7 @@ const HeaderActions = () => {
           className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
         >
           Log in
-        </button>
+        </button> */}
       </div>
 
       {modal === "login" && (
