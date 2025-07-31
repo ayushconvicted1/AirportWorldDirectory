@@ -1,5 +1,5 @@
 // app/page.tsx
-import React from "react";
+import React, { Suspense } from "react";
 import { FaQrcode } from "react-icons/fa";
 import { FaGooglePlay } from "react-icons/fa6";
 import { IoLogoApple } from "react-icons/io5";
@@ -132,7 +132,9 @@ export default async function HomePage() {
   const serviceTypes = await getServiceTypes();
   return (
     <div className="bg-white font-sans">
-      <Header serviceTypes={serviceTypes} />
+      <Suspense fallback={<div>Loading ...</div>}>
+        <Header serviceTypes={serviceTypes} />
+      </Suspense>
       <div className="container mx-auto px-4">
         {/* Pass serviceTypes to the updated MainContent component */}
         <MainContent serviceTypes={serviceTypes} />
