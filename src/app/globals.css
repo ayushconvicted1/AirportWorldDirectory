@@ -6,3 +6,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+/* Make the phone input's container flexible */
+.phone-input-custom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Remove margin from the country flag icon */
+.PhoneInputCountryIcon {
+  margin: 0 !important;
+}

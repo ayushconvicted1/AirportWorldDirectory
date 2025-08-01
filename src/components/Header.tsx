@@ -4,9 +4,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useRouter, useSearchParams } from "next/navigation";
+import HeaderActions from "./HeaderActions";
 
 // --- TYPE DEFINITIONS ---
-interface ServiceType {
+export interface ServiceType {
   _id: string;
   name: string;
   image: string;
@@ -39,7 +40,7 @@ const Navbar = () => (
     <div className="text-2xl font-bold text-gray-800">
       {/* Your Logo Here */}
     </div>
-    {/* <HeaderActions /> */}
+    <HeaderActions />
   </nav>
 );
 
