@@ -167,9 +167,9 @@ export default function Header({ serviceTypes }: HeaderProps) {
             <div className="order-1">
               <Link
                 href="/"
-                className="text-3xl font-bold text-blue-600 tracking-tight"
+                className="text-xl font-bold text-blue-600 tracking-tight"
               >
-                <img src={"/logo.png"} className="h-[100px] w-[200px]" />
+                Airport Directory World
               </Link>
             </div>
 
